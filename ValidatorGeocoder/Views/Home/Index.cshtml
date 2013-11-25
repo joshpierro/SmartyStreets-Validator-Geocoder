@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Validator - Geocoder</title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="http://handsontable.com/dist/jquery.handsontable.full.css">
+
+    <!-- Custom styles for this template -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Validator-Geocoder</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#about">About</a></li>
+                    <li><a href="#help">Help!</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="starter-template">
+            <h1>ValidatorGeocoder</h1>
+            
+           
+            
+            <p class="lead">
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+ Set your SmartyStreets id and token</button>
+      
+                <br/><br/>
+                Copy Your data into the grid below<br/><br/>
+                <button class="btn btn-lg btn-success" role="button" id="validate-button">Validate!</button>
+            </p>
+
+
+            <form id="addresses-form" name="addresses-form" action="home/ProcessAddresses" method="post">
+                <input type="hidden" id="tableData" name="tableData" value="hi" /><br />
+                <input type="hidden" id="smartyId" name="smartyId" value="bye" /><br />
+                <input type="hidden" id="smartyToken" name="smartyToken" value="wow" /><br />
+            </form>
+
+            
+        </div>
+        <div id="table-container" class="well">
+            <div id="properties-table" class="handsontable"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Smarty Streets</h4>
+      </div>
+        <div class="modal-body token">
+            id: <input type="text" placeholder="smarty streets id" id ="smarty-id"/> 
+            <br/> <br/> 
+            token:<input type="text" placeholder="smarty streets token" id ="smarty-token"/>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        @*<button type="button" class="btn btn-primary">Save changes</button>*@
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://handsontable.com/lib/jquery.min.js"></script>
+    <script src="http://handsontable.com/dist/jquery.handsontable.full.js"></script>
+    <script src="~/Scripts/validator.js"></script>
+</body>
+</html>

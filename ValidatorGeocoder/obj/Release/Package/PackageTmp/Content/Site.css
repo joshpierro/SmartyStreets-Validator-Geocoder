@@ -1,0 +1,21 @@
+﻿body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#table-container {
+
+    text-align:center !important;
+    padding-left: 15%;
+}
+#properties-table {
+margin: 0 auto !important;
+
+  
+}
+#table-data {
+    /*visibility: hidden*/
+}
